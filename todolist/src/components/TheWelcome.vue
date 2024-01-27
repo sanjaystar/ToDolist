@@ -1,86 +1,77 @@
 <script setup>
-import WelcomeItem from './WelcomeItem.vue'
-import DocumentationIcon from './icons/IconDocumentation.vue'
-import ToolingIcon from './icons/IconTooling.vue'
-import EcosystemIcon from './icons/IconEcosystem.vue'
-import CommunityIcon from './icons/IconCommunity.vue'
-import SupportIcon from './icons/IconSupport.vue'
+
 </script>
 
 <template>
-  <div>
-    <WelcomeItem>
-      <template #icon>
-        <DocumentationIcon />
-      </template>
-      <template #heading>Documentation</template>
-
-      Vue’s
-      <a target="_blank" href="https://v2.vuejs.org/">official documentation</a>
-      provides you with all information you need to get started.
-    </WelcomeItem>
-
-    <WelcomeItem>
-      <template #icon>
-        <ToolingIcon />
-      </template>
-      <template #heading>Tooling</template>
-
-      This project is served and bundled with
-      <a href="https://vitejs.dev/guide/features.html" target="_blank">Vite</a>. The recommended IDE
-      setup is <a href="https://code.visualstudio.com/" target="_blank">VSCode</a> +
-      <a href="https://github.com/johnsoncodehk/volar" target="_blank">Volar</a>. If you need to
-      test your components and web pages, check out
-      <a href="https://www.cypress.io/" target="_blank">Cypress</a> and
-      <a href="https://docs.cypress.io/guides/component-testing/introduction" target="_blank"
-        >Cypress Component Testing</a
-      >.
-
-      <br />
-
-      More instructions are available in <code>README.md</code>.
-    </WelcomeItem>
-
-    <WelcomeItem>
-      <template #icon>
-        <EcosystemIcon />
-      </template>
-      <template #heading>Ecosystem</template>
-
-      Get official tools and libraries for your project:
-      <a target="_blank" href="https://pinia.vuejs.org/">Pinia</a>,
-      <a target="_blank" href="https://v3.router.vuejs.org/">Vue Router</a>,
-      <a target="_blank" href="https://vue-test-utils.vuejs.org/">Vue Test Utils</a>, and
-      <a target="_blank" href="https://github.com/vuejs/devtools">Vue Dev Tools</a>. If you need
-      more resources, we suggest paying
-      <a target="_blank" href="https://github.com/vuejs/awesome-vue">Awesome Vue</a>
-      a visit.
-    </WelcomeItem>
-
-    <WelcomeItem>
-      <template #icon>
-        <CommunityIcon />
-      </template>
-      <template #heading>Community</template>
-
-      Got stuck? Ask your question on
-      <a target="_blank" href="https://chat.vuejs.org">Vue Land</a>, our official Discord server, or
-      <a target="_blank" href="https://stackoverflow.com/questions/tagged/vue.js">StackOverflow</a>.
-      You should also subscribe to
-      <a target="_blank" href="https://news.vuejs.org">our mailing list</a> and follow the official
-      <a target="_blank" href="https://twitter.com/vuejs">@vuejs</a>
-      twitter account for latest news in the Vue world.
-    </WelcomeItem>
-
-    <WelcomeItem>
-      <template #icon>
-        <SupportIcon />
-      </template>
-      <template #heading>Support Vue</template>
-
-      As an independent project, Vue relies on community backing for its sustainability. You can
-      help us by
-      <a target="_blank" href="https://vuejs.org/sponsor/">becoming a sponsor</a>.
-    </WelcomeItem>
+  <div class="forms">
+    <h1 class="login">Login Form</h1>
+    <h3 class="text">
+    <input type="text" placeholder="Your username or email">
+    <br>
+    <input type="password" placeholder="Password">
+    </h3>
+    <h2>
+      <button>sign in</button>
+    </h2>
+      <h6><router-link to="/forget">Forget password?</router-link></h6>
   </div>
 </template>
+
+<style scoped>
+
+.forms{
+  margin: auto;
+  height: 300px;
+  width: 300px;
+  border-radius: 15px;
+
+}
+.login{
+  padding-top: 1px;
+  text-align: center;
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-size: xx-large;
+}
+input[type=text]{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 55%;
+  margin: 20px ;  
+  width: 86%;
+  padding: 5px;
+}
+input[type=password]{
+  font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  opacity: 55%;
+  margin: 0px 20px;  
+  width: 86%;
+  padding: 5px;
+}
+h2{
+  text-align: center;
+  font-size: x-large; 
+}
+
+button{
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-weight: bold;
+  width: 86%;
+  padding: 5px;
+  margin: 30px 20px 0px;
+  color: white;
+  font-size: medium;
+  background-color: black;
+  border: 1px solid;
+  
+}
+
+button:hover{
+  background-color:rgb(10, 207, 233);
+}
+h6{
+  margin-top: 10px;
+  text-align: center;
+  width: 100%;
+  font-size: small;
+  text-decoration: underline;
+}
+</style>
